@@ -5,6 +5,7 @@ class PredictionEntity(Base):
     __tablename__ = 'prediction'
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("user.id"))
+    prediction_year = Column(String, index=True)
     median_tasmax = Column(String, index=True)
     mean_tas = Column(String, index=True)
     median_cwd = Column(String, index=True)
